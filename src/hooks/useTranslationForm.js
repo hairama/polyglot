@@ -11,9 +11,15 @@ export default function useTranslationForm() {
     const [formValidationError, setFormValidationError] = useState(null);
 
     const handleUserInput = useCallback((userTextValue) => {
-        setFormValidationError(userTextValue.length >= 45 ? "Maximum 45 characters" : null);
+        if (userTextValue.length > 255) {
+            setFormValidationError("Maximum 255 characters");
+            return; 
+        }
+    
+        setFormValidationError(null); 
         setUserText(userTextValue);
     }, []);
+    
 
     async function handleTranslate() {
         if (!userText) {

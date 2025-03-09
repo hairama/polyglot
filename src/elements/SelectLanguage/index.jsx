@@ -5,54 +5,39 @@ import SpFlag from "/sp-flag.png"
 import FrFlag from "/fr-flag.png"
 
 export default function SelectLanguage({ onLanguageChange }) {
+    
+    const languageArray = [
+                {language: "French", flag: FrFlag}, 
+                {language: "Spanish", flag: SpFlag}, 
+                {language: "Japanese", flag: JpnFlag}
+            ]
+
+    const languageRadioButtonJSX = languageArray.map(language => {
+        // Creates a lowercase version of language name for key, id, and value attributes
+        const languageLowerCase = language.language.toLowerCase()
+        return (
+            <div className="radio-choice" key={languageLowerCase}>
+                <input 
+                    type="radio"
+                    name={language.language}
+                    id={languageLowerCase}
+                    value={languageLowerCase}
+                    onChange={(e) => {
+                        onLanguageChange(e.target.value)}}
+                />
+                <label
+                    htmlFor={languageLowerCase}
+                > {language.language}</label>
+                <img src={language.flag} className="flag"/>
+            </div>
+        )
+    })
+    
     return (
         <section>
-            <label className='select-language'>Select language 👇</label>
-
-            <div className="radio-choice">
-                <input 
-                    type="radio"
-                    name="language"
-                    id="french"
-                    value="french"
-                    onChange={(e) => {
-                        console.log("Selected language:", e.target.value);
-                        onLanguageChange(e.target.value);
-                    }}
-                />
-                <label> French</label>
-                <img src={FrFlag} className="flag"/>
-            </div>
-
-            <div className="radio-choice">
-                <input 
-                    type="radio"
-                    name="language"
-                    id="spanish"
-                    value="spanish"
-                    onChange={(e) => {
-                        console.log("Selected language:", e.target.value);
-                        onLanguageChange(e.target.value);
-                    }}
-                />
-                <label> Spanish</label>
-                <img src={SpFlag} className="flag"/>
-            </div>
-
-            <div className="radio-choice">
-                <input 
-                    type="radio"
-                    name="language"
-                    id="japanese"
-                    value="japanese"
-                    onChange={(e) => {
-                        console.log("Selected language:", e.target.value);
-                        onLanguageChange(e.target.value);
-                    }}
-                />
-                <label> Japanese</label>
-                <img src={JpnFlag} className="flag"/>
-            </div>
+            <label 
+                className='select-language'>Select language 👇</label>
+            {languageRadioButtonJSX}
         </section>
     );
 }

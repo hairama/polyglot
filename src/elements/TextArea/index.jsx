@@ -7,7 +7,7 @@ export default function Input({id="", labelName = "", value="", onChange}) {
     return (
         <>
             <label  
-                htmlFor={value}            
+                htmlFor={id}            
             >{labelName}</label>
             <textarea
                 id={id}

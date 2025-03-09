@@ -21,4 +21,4 @@ Steps
     - ✅ Determine how to handle YourTranslation component
     - ✅ Add functionality to Button
     - ✅ Add state to: Input, Select Language, Button --> & connect to useTranslation
-    
+    - ✅ Simplify <SelectLanugage> component

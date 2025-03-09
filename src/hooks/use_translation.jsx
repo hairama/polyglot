@@ -20,8 +20,6 @@ export default function use_translation() {
             return;
         }
     
-        // console.log("Calling OpenAI API with text:", userText, "and language:", language);
-    
         setLoading(true);
         try {
             const response = await openai.chat.completions.create({

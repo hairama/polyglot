@@ -1,4 +1,4 @@
-import { React } from "react"
+import React from "react"
 import "./TextArea.scss"
 
 export default function Input({id="", labelName = "", value="", error=null, onChange=()=>{}, readOnly=false}) {
@@ -17,6 +17,7 @@ export default function Input({id="", labelName = "", value="", error=null, onCh
                 onChange={onChange}
                 readOnly={readOnly}
                 disabled={readOnly}
+                aria-disabled="true"
             >
             </textarea>
         </>

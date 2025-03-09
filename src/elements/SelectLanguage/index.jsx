@@ -20,7 +20,7 @@ export default function SelectLanguage({ onLanguageChange }) {
             <div className="radio-choice" key={languageLowerCase}>
                 <input 
                     type="radio"
-                    name={language.language}
+                    name="language-selection"
                     id={languageLowerCase}
                     value={languageLowerCase}
                     onChange={(e) => {
@@ -29,7 +29,7 @@ export default function SelectLanguage({ onLanguageChange }) {
                 <label
                     htmlFor={languageLowerCase}
                 > {language.language}</label>
-                <img src={language.flag} className="flag"/>
+                <img src={language.flag} className="flag" alt={`${language.language} flag`}/>
             </div>
         )
     })

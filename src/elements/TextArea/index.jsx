@@ -7,15 +7,15 @@ export default function TextArea({ id="", labelName="", value="", error=null, on
     // Function to adjust height dynamically
     const handleResize = () => {
         if (textAreaRef.current) {
-            textAreaRef.current.style.height = "auto"; // Reset height to auto
-            textAreaRef.current.style.height = textAreaRef.current.scrollHeight + "px"; // Expand based on content
+            textAreaRef.current.style.height = "auto"; 
+            textAreaRef.current.style.height = textAreaRef.current.scrollHeight + "px";
         }
     };
 
-    // Resize whenever value changes (fix for translation being set programmatically)
+    // Resize whenever value (from user input) changes
     useEffect(() => {
         handleResize();
-    }, [value]); // Runs whenever 'value' (text content) changes
+    }, [value]); 
 
     return (
         <>
@@ -32,11 +32,6 @@ export default function TextArea({ id="", labelName="", value="", error=null, on
                 }}
                 readOnly={readOnly}
                 disabled={readOnly}
-                style={{
-                    overflow: "hidden",
-                    resize: "none", 
-                    minHeight: "40px",
-                }}
             />
         </>
     );

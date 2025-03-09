@@ -13,11 +13,14 @@ textarea {
     box-sizing: border-box;
     padding: 10px 12px;
     margin: 24px 0;
-    width: 300px;
+    width: clamp(300px, 100%, 440px);
     @include root.input-text;
-
 }
 
 textarea:focus, textarea:active {
     border: none;
+}
+
+.error {
+    color: red;
 }

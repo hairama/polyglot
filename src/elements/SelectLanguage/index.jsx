@@ -5,7 +5,7 @@ import SpFlag from "/sp-flag.png"
 import FrFlag from "/fr-flag.png"
 
 export default function SelectLanguage({ onLanguageChange }) {
-    
+    // To simulate data coming from an API or preferences/settings page
     const languageArray = [
                 {language: "French", flag: FrFlag}, 
                 {language: "Spanish", flag: SpFlag}, 

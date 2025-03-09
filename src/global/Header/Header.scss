@@ -3,6 +3,7 @@
 header {
     background-color: var(--color-blue-500);
     align-items: center;
+    justify-content: center;
     background-image: url("/world-map-vector.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -28,3 +29,9 @@ p {
     margin-top: 0;
     @include root.by-line;
 }
+
+@media (min-width: 430px) {
+    header {
+      border-radius: 12px 12px 0 0;
+    }
+  }

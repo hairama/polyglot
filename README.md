@@ -22,3 +22,9 @@ Steps
     - ✅ Add functionality to Button
     - ✅ Add state to: Input, Select Language, Button --> & connect to useTranslation
     - ✅ Simplify <SelectLanugage> component
+    - ✅ Add responsive design
+    - Clean up useTranslation
+    - Move <Header> and <Main> to a Component folder
+    - Update Readme.md
+    - Fix language selection bug
+

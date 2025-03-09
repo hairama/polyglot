@@ -14,7 +14,6 @@ export default function use_translation() {
     const [error, setError] = useState(null);
 
     const translateText = useCallback(async (userText, language) => {
-        console.log(`Text: ${userText}, language: ${language}`)
         if (!userText || !language) {
             console.warn("Skipping translation: Missing userText or language");
             return;
@@ -29,8 +28,6 @@ export default function use_translation() {
                     { role: "user", content: userText }
                 ]
             });
-    
-            console.log("OpenAI Response:", response);
     
             if (!response || !response.choices || !response.choices[0]?.message?.content) {
                 throw new Error("Invalid API response");

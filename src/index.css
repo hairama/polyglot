@@ -8,3 +8,9 @@ body {
   background-color: #242424;
 }
 
+@media (min-width: 430px) {
+  body {
+    margin: max(5vw, 3vh);
+  }
+}
+

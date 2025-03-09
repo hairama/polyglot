@@ -4,6 +4,7 @@ import JpnFlag from "/jp-flag.png"
 import SpFlag from "/sp-flag.png"
 import FrFlag from "/fr-flag.png"
 
+// TODO: fix language selection bug
 export default function SelectLanguage({ onLanguageChange }) {
     // To simulate data coming from an API or preferences/settings page
     const languageArray = [

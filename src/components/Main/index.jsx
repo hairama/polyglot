@@ -2,9 +2,9 @@ import "./Main.scss";
 
 import { React, useState } from "react";
 
-import TextArea from "../../elements/TextArea/index";
-import SelectLanguage from "../../elements/SelectLanguage";
-import Button from "../../elements/Button/index";
+import TextArea from "/src/elements/TextArea/index";
+import SelectLanguage from "/src/elements/SelectLanguage";
+import Button from "/src/elements/Button/index";
 
 import use_translation from "../../hooks/use_translation";
 
@@ -26,16 +26,21 @@ export default function Main() {
     }
     
     async function handleTranslate() {
-        // Check that the user entered text to translate AND selected a language
-        if (!userText || !selectedLanguage ) {
-            setFormValidationError("Enter text & select language");
+        if (!userText) {
+            setFormValidationError("Enter text to translate");
             return;
-        }
-        setFormValidationError(null);
-        await translateText(userText, selectedLanguage); 
+        } else if (!selectedLanguage ) {
+            setFormValidationError("Select a language");
+            return;
+        } else {
+            setFormValidationError(null);
+            await translateText(userText, selectedLanguage); 
         
-        // After successful translation, toggle the translation view
-        setIsTranslated(true); 
+            // After successful translation, toggle the translation view
+            setIsTranslated(true); 
+        }
+        
+        
     }
 
     function handleStartOver() {
@@ -52,17 +57,18 @@ export default function Main() {
             <TextArea 
                 id="TextToTranslate"
                 labelName={userInputLabelOrErrorMessage}
-                value={userText}
                 onChange={(e) => handleUserInput(e.target.value)}
+                value={userText}
                 error={formValidationError}
-                readOnly={false}/>
+                readOnly={isTranslated ? true : false}/>
             {/* Displays translated text when handleTranslate runs successfully */}
             {isTranslated ? (
                 <>
                     <TextArea 
                         readOnly={true}
                         labelName="Your translation 👇"
-                        value={translationOrLoadingOrErrorMessage}/>
+                        value={translationOrLoadingOrErrorMessage}
+                        onChange={()=>{}}/>
                     <Button 
                         text="Start Over" 
                         onClick={handleStartOver}/>

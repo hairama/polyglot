@@ -39,8 +39,6 @@ export default function Main() {
             // After successful translation, toggle the translation view
             setIsTranslated(true); 
         }
-        
-        
     }
 
     function handleStartOver() {
@@ -50,7 +48,6 @@ export default function Main() {
     }
 
     const userInputLabelOrErrorMessage = formValidationError ? formValidationError : "Text to translate 👇"
-    const translationOrLoadingOrErrorMessage = (loading === true ) ? (<p>Loading...</p>) : (translation || error)
 
     return (
         <article>
@@ -67,8 +64,7 @@ export default function Main() {
                     <TextArea 
                         readOnly={true}
                         labelName="Your translation 👇"
-                        value={translationOrLoadingOrErrorMessage}
-                        onChange={()=>{}}/>
+                        value={translation}/>
                     <Button 
                         text="Start Over" 
                         onClick={handleStartOver}/>

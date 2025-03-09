@@ -24,7 +24,7 @@ Steps
     - ✅ Simplify <SelectLanugage> component
     - ✅ Add responsive design
     - Clean up useTranslation
-    - Move <Header> and <Main> to a Component folder
+    - ✅ Move <Header> and <Main> to a Component folder
     - Update Readme.md
     - Fix language selection bug
 

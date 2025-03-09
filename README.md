@@ -6,12 +6,12 @@
 ![Polyglot](/public/assets/mobile-screenshot.png)
 
 ## *Features* 🌟
-🎯 **Translate text in real time** using OpenAI's GPT API.
-🎯 **Intuitive UI** with a minimalist design for easy navigation.
-🎯 **Supports multiple languages** (currently French, Spanish, and Japanese).
-🎯 **Error handling** for input validation (e.g., character limits, empty fields).
-🎯 **"Start Over" button** to reset the translation process.
-🎯 **Keyboard & Accessibility support** (e.g., `aria-live` for error messages).
+🎯 **Translate text in real time** using OpenAI's GPT API.  
+🎯 **Intuitive UI** with a minimalist design for easy navigation.  
+🎯 **Supports multiple languages** (currently French, Spanish, and Japanese).  
+🎯 **Error handling** for input validation (e.g., character limits, empty fields).  
+🎯 **"Start Over" button** to reset the translation process.  
+🎯 **Keyboard & Accessibility support** (e.g., `aria-live` for error messages).  
 
 ## *Tech Stack* 🛠️
 - **Frontend:** React (Vite), SCSS
@@ -43,7 +43,6 @@ npm install
 ```sh
 npm run dev
 ```
-The app should now be running at http://localhost:5173.
 
 Usage 🚀
 1. Enter the text you want to translate.
@@ -61,15 +60,15 @@ Potential Improvements 🔍
 - Save and display past translations.
 - Add a dark mode toggle.
 
-What I Learned 🤓
-🧠 State Management Best Practices: Managing user input, errors, and API responses effectively with React Hooks.
-🧠 Accessibility Considerations: Implementing aria-live for error messages and ensuring proper radio button grouping.
-🧠 Optimizing Performance: Avoiding unnecessary re-renders with useCallback and React refs instead of direct DOM manipulation.
+What I Learned 🤓  
+🧠 State Management Best Practices: Managing user input, errors, and API responses effectively with React Hooks.  
+🧠 Accessibility Considerations: Implementing aria-live for error messages and ensuring proper radio button grouping.  
+🧠 Optimizing Performance: Avoiding unnecessary re-renders with useCallback and React refs instead of direct DOM manipulation.  
 
-Resources 🗃️
-🗃️ OpenAI API Docs
-🗃️ React Docs
-🗃️ Vite Docs
+Resources 🗃️  
+🗃️ OpenAI API Docs  
+🗃️ React Docs  
+🗃️ Vite Docs  
 
 Links 🔗
 [Live Demo 👈](https://panglottes.netlify.app/)

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins SemiBold";
+    src: url("/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url("/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Big Shoulders Display";
+    src: url("/Big_Shoulders_Display/static/BigShouldersDisplay-ExtraBold.ttf");
+}
+
+:root {
+    --color-blue-500: #0D182E;
+    --color-blue-400: #1C325F;
+    --color-blue-300: #252F42;
+    --color-blue-200: #035A9D;
+
+    --color-white: #FFFFFF;
+
+    --color-gray-100: #EFF0F4;
+    --color-gray-200: #999999;
+    --color-gray-400: #BCBCBC;
+    --color-gray-600: #586E88;
+    --color-gray-800: #333333;
+    --color-gray-900: #252525;
+
+    --color-green-900: #32CD32;
+    --color-green-600: #65DA65;
+
+    --text-size-title: 43.42px;
+    --text-size-medium: 24px;
+    --text-size-small: 20px;
+
+    --spacing-lg: 42px;
+    --spacing-md: 28px;
+    --spacing-sm: 14px;
+
+    --text-weight-title: 900;
+    --text-weight-button: 600;
+    --text-weight-normal: 500;
+    --text-weight-light: 400;
+
+    --card-border-radius: 15px;
+    --card-border-width: 4px;
+
+    --button-border-radius: 6px;
+    --button-border-width: 0px;
+
+    --input-border-radius: 8px;
+    --input-border-width: 0px;
+
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin title-text {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 43.42px;
+    color: #32CD32;
+}
+
+@mixin by-line {
+    font-family: "Poppins SemiBold", sans-serif;
+    font-size: 12.21px;
+    color: var(--color-white);
+}
+
+@mixin label-text {
+    font-family: "Poppins Bold", sans-serif;
+    font-size: 20px;
+    color: var(--color-blue-200);
+}
+
+@mixin input-text {
+    font-family: "Poppins SemiBold", sans-serif;
+    font-size: 20px;
+    color: var(--color-gray-900);
+}
+
+@mixin button-text {
+    font-family: "Poppins Bold", sans-serif;
+    font-size: 24px;
+    color: var(--color-white);
+}

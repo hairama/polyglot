@@ -1,0 +1,17 @@
+article {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--card-border-width) solid var(--color-blue-300);
+    border-radius: var(--card-border-radius);
+    margin: var(--spacing-md) var(--spacing-sm) var(--spacing-lg);
+    padding: 24px;
+}
+
+
+
+
+
+

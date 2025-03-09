@@ -1,0 +1,23 @@
+@use "/src/global/styles/root";
+
+label {
+    border: none;
+    @include root.label-text;
+}
+
+textarea {
+    background-color: var(--color-gray-100);
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin: 24px 0;
+    width: 300px;
+    @include root.input-text;
+
+}
+
+textarea:focus, textarea:active {
+    border: none;
+}

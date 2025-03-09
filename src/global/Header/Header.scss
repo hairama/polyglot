@@ -1,0 +1,30 @@
+@use "/src//global/styles/root";
+
+header {
+    background-color: var(--color-blue-500);
+    align-items: center;
+    background-image: url("/world-map-vector.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 100%;
+    align-self: center;
+    padding: 0 42px;
+    height: 213px;
+}
+
+.parrot {
+    width: 94.88px;
+    height: 84.8px;
+}
+
+.title-text {
+    @include root.title-text;
+    margin-bottom: 0;
+}
+
+p {
+    color: var(--color-white);
+    font-size: var(--text-size-small);
+    margin-top: 0;
+    @include root.by-line;
+}

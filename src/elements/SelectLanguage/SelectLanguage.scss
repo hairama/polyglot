@@ -1,0 +1,48 @@
+section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--color-blue-200);
+}
+
+label.select-language {
+    display: inline-block;
+    padding-bottom: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.radio-choice {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: left;
+    margin: 0 0 0 var(--spacing-md);
+    padding: 0;
+    gap: 12px;
+
+    label {
+        display: inline-block;
+        color: black;
+        background-color: var(--color-white);
+        margin: 0;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+input {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-900);
+    font-size: var(--text-weight-normal);
+    border: none;
+    border-radius: var(--input-border-radius);
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+}
+

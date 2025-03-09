@@ -31,7 +31,6 @@ export default function TextArea({ id="", labelName="", value="", error=null, on
                     onChange(e);
                 }}
                 readOnly={readOnly}
-                disabled={readOnly}
             />
         </>
     );

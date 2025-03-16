@@ -3,8 +3,7 @@ import { useState, useCallback } from "react";
 const chatGptApiKey = import.meta.env.VITE_OPENAI_API_KEY;
 
 const openai = new OpenAI({
-    apiKey: chatGptApiKey,
-    dangerouslyAllowBrowser: true
+    apiKey: chatGptApiKey
 }); 
 
 export default function use_translation() {
